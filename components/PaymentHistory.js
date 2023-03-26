@@ -7,11 +7,7 @@ export default function Focus() {
       <Text style= {styles.text}>Transaction history</Text>
       <View style={styles.tray}>
         <View style={styles.firstcontainer}>
-          {/* <Text style={styles.text2}>Split Among</Text>
-          <View style={styles.view1} ></View>
-          <View style={styles.view1} ></View>
-          <View style={styles.view1} ></View>
-          <View style={styles.view1} ></View> */}
+          
 
         </View>
         <View style={styles.firstcontainer}>
@@ -37,12 +33,7 @@ export default function Focus() {
           placeholder = 'Add comment'/>
 
         </View>
-        {/* <Button style={styles.btn1} >
-          title='Save'
-          color='#010B40'
-          
-          //onPress={grouppage}
-        </Button> */}
+        
 
       </View>
       <StatusBar style="auto" />

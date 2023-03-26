@@ -77,6 +77,7 @@ import { View, TextInput, Button, StyleSheet, Text, Image } from 'react-native';
 export default function Paypal ({ navigation }) {
   const [email, setEmail] = useState('');
   const [value, setValue] = useState('');
+  const [person,setPerson]= useState('');
 
   const handleInputChange = (text) => {
     // filter out any non-numeric characters
@@ -87,6 +88,10 @@ export default function Paypal ({ navigation }) {
   const handleEmailChange = (text) => {
     setEmail(text);
   };
+
+  const hadnlePersonChange=(text)=>{
+    setPerson(text);
+  }
 
   const handleSubmit = () => {
     // handle submitting the form and navigating to the next page
@@ -123,7 +128,17 @@ export default function Paypal ({ navigation }) {
           value={value}
         />
       </View>
-      <Button title="Submit" onPress={handleSubmit} />
+      <View>
+        <Text>receiver Paypal email </Text>
+        <TextInput
+          style={styles.input}
+          placeholder="example@gmail.com"
+          keyboardType="numeric"
+          onChangeText={handleInputChange}
+          value={value}
+        />
+      </View>
+      <Button style={styles.button} title="Submit" onPress={handleSubmit} />
     </View>
   );
 };
@@ -140,4 +155,9 @@ const styles=StyleSheet.create({
     margin: 10,
     padding: 10,
   },
+  button:{
+    margin: 10,
+    padding:10,
+    color:'black',
+  }
 });

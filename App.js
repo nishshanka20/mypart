@@ -7,6 +7,8 @@ import PaymentHistory from './components/PaymentHistory';
 import PaymentDisplay from './components/PaymentDisplay';
 import PaymentMethod from './components/PaymentMethod';
 import Paypal from './components/Paypal';
+import Rate from './components/Rate';
+
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,8 @@ export default function App() {
         <Stack.Screen name="Paypal" component={Paypal} options={{title:'paypal'}}/>
       </Stack.Navigator>
     </NavigationContainer>
+     //<Rate/>
+    //<PaymentHistory/>
   );
 }
 
